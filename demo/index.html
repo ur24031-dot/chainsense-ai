@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChainSense AI — Scope 3 Supply Chain Intelligence</title>
+  <meta name="description" content="ChainSense AI: Autonomous GenAI platform for Scope 3 supply chain ESG intelligence. Discover, monitor, and report on Tier 1-4 suppliers in real time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">🌿</span>
+      <span class="logo-text">ChainSense<span class="logo-accent"> AI</span></span>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-tab="dashboard" id="nav-dashboard">
+        <span class="nav-icon">⬡</span> Dashboard
+      </button>
+      <button class="nav-item" data-tab="discovery" id="nav-discovery">
+        <span class="nav-icon">🔍</span> Discovery Agent
+      </button>
+      <button class="nav-item" data-tab="monitoring" id="nav-monitoring">
+        <span class="nav-icon">📡</span> Monitoring Agent
+        <span class="badge" id="alert-badge">3</span>
+      </button>
+      <button class="nav-item" data-tab="compliance" id="nav-compliance">
+        <span class="nav-icon">📋</span> Compliance Agent
+      </button>
+      <button class="nav-item" data-tab="conversational" id="nav-conversational">
+        <span class="nav-icon">💬</span> Chat Agent
+      </button>
+      <button class="nav-item" data-tab="auditlog" id="nav-auditlog">
+        <span class="nav-icon">🔐</span> Audit Log
+      </button>
+    </nav>
+    <div class="sidebar-status">
+      <div class="status-row"><span class="status-dot green"></span> Neo4j Graph</div>
+      <div class="status-row"><span class="status-dot green"></span> Redis Streams</div>
+      <div class="status-row"><span class="status-dot green"></span> PostgreSQL</div>
+      <div class="status-row"><span class="status-dot yellow"></span> Pinecone</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-title" id="page-title">Dashboard</span>
+        <span class="topbar-sub" id="page-sub">ET Gen AI Hackathon 2026 · PS #5</span>
+      </div>
+      <div class="topbar-right">
+        <div class="livepill"><span class="pulse"></span> LIVE</div>
+        <div class="enterprise-badge">TechFabrics Ltd.</div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════ DASHBOARD ═══════════════════════ -->
+    <section class="tab-content active" id="tab-dashboard">
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#22c55e22,#16a34a22)">🏭</div>
+          <div class="kpi-info"><div class="kpi-val" id="kpi-suppliers">247</div><div class="kpi-label">Suppliers Mapped</div></div>
+          <div class="kpi-delta up">+12 this week</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#ef444422,#dc262622)">⚠️</div>
+          <div class="kpi-info"><div class="kpi-val" id="kpi-alerts">18</div><div class="kpi-label">ESG Alerts Active</div></div>
+          <div class="kpi-delta down">3 CRITICAL</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#3b82f622,#1d4ed822)">📋</div>
+          <div class="kpi-info"><div class="kpi-val" id="kpi-reports">6</div><div class="kpi-label">Reports Generated</div></div>
+          <div class="kpi-delta up">2 PENDING</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#a855f722,#7c3aed22)">🌍</div>
+          <div class="kpi-info"><div class="kpi-val" id="kpi-co2">12,480</div><div class="kpi-label">tCO₂e Scope 3</div></div>
+          <div class="kpi-delta up">±5% accuracy</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Supply Graph Preview -->
+        <div class="card card-tall">
+          <div class="card-header">
+            <h2>Supply Graph <span class="tag tag-live">LIVE</span></h2>
+            <button class="btn-ghost" onclick="switchTab('discovery')">Explore →</button>
+          </div>
+          <canvas id="graphCanvas" width="500" height="340"></canvas>
+          <div class="graph-legend">
+            <span class="leg"><span class="dot" style="background:#22c55e"></span>Tier 1</span>
+            <span class="leg"><span class="dot" style="background:#3b82f6"></span>Tier 2</span>
+            <span class="leg"><span class="dot" style="background:#f59e0b"></span>Tier 3</span>
+            <span class="leg"><span class="dot" style="background:#ef4444"></span>Tier 4</span>
+          </div>
+        </div>
+
+        <!-- Live Alerts Feed -->
+        <div class="card card-tall">
+          <div class="card-header">
+            <h2>Live Alerts <span class="tag tag-crit">3 CRITICAL</span></h2>
+            <button class="btn-ghost" onclick="switchTab('monitoring')">All Alerts →</button>
+          </div>
+          <div class="alert-feed" id="alert-feed-dash"></div>
+        </div>
+      </div>
+
+      <!-- Agent Status Row -->
+      <div class="grid-4">
+        <div class="agent-card">
+          <div class="agent-hdr"><span>🔍</span><b>Discovery</b></div>
+          <div class="agent-stat">F1 Score: <b class="green">0.87</b></div>
+          <div class="agent-stat">Docs Processed: <b>1,243</b></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:87%;background:#22c55e"></div></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-hdr"><span>📡</span><b>Monitoring</b></div>
+          <div class="agent-stat">F1 Score: <b class="green">0.83</b></div>
+          <div class="agent-stat">Signals/day: <b>4,200</b></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:83%;background:#3b82f6"></div></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-hdr"><span>📋</span><b>Compliance</b></div>
+          <div class="agent-stat">Reports: <b>6 total</b></div>
+          <div class="agent-stat">Avg Time: <b class="green">2 weeks</b></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:91%;background:#a855f7"></div></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-hdr"><span>💬</span><b>Conversational</b></div>
+          <div class="agent-stat">Queries Today: <b>38</b></div>
+          <div class="agent-stat">Avg Latency: <b class="green">1.2s</b></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:78%;background:#f59e0b"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ DISCOVERY ═══════════════════════ -->
+    <section class="tab-content" id="tab-discovery">
+      <div class="grid-2" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <div class="card-header"><h2>Upload Invoice / PO</h2></div>
+          <div class="upload-zone" id="upload-zone" onclick="simulateUpload()">
+            <div class="upload-icon">📄</div>
+            <p>Click to upload or drag PDF/image invoice</p>
+            <span class="upload-hint">Supported: PDF, PNG, JPG · Max 20MB · PII auto-anonymized</span>
+          </div>
+          <div id="ner-progress" style="display:none">
+            <div class="stage-list" id="stage-list"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h2>NER Results <span class="tag">LLaMA 3.1-8B</span></h2></div>
+          <div id="ner-results">
+            <div class="empty-state">Upload an invoice to see extracted supplier entities</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Supplier Graph <span class="tag tag-live">247 nodes · 389 edges</span></h2>
+          <div class="filter-row">
+            <button class="pill active" onclick="filterGraph('all',this)">All</button>
+            <button class="pill" onclick="filterGraph('t1',this)">Tier 1</button>
+            <button class="pill" onclick="filterGraph('t2',this)">Tier 2</button>
+            <button class="pill" onclick="filterGraph('t3',this)">Tier 3+</button>
+          </div>
+        </div>
+        <canvas id="graphCanvasBig" width="900" height="420"></canvas>
+        <div id="supplier-table-wrap">
+          <table class="data-table" id="supplier-table">
+            <thead><tr><th>Supplier</th><th>GST</th><th>Tier</th><th>Location</th><th>Material</th><th>Risk Score</th><th>Status</th></tr></thead>
+            <tbody id="supplier-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ MONITORING ═══════════════════════ -->
+    <section class="tab-content" id="tab-monitoring">
+      <div class="filter-toolbar">
+        <label>Severity:</label>
+        <button class="pill active" onclick="filterAlerts('all',this)">All</button>
+        <button class="pill crit" onclick="filterAlerts('CRITICAL',this)">CRITICAL</button>
+        <button class="pill high" onclick="filterAlerts('HIGH',this)">HIGH</button>
+        <button class="pill med" onclick="filterAlerts('MEDIUM',this)">MEDIUM</button>
+        <button class="pill low" onclick="filterAlerts('LOW',this)">LOW</button>
+        &nbsp;&nbsp;<label>Label:</label>
+        <button class="pill" onclick="filterAlerts('E',this)">🌿 Environmental</button>
+        <button class="pill" onclick="filterAlerts('S',this)">🤝 Social</button>
+        <button class="pill" onclick="filterAlerts('G',this)">🏛️ Governance</button>
+      </div>
+      <div id="alerts-grid" class="alerts-grid"></div>
+    </section>
+
+    <!-- ═══════════════════════ COMPLIANCE ═══════════════════════ -->
+    <section class="tab-content" id="tab-compliance">
+      <div class="grid-2" style="margin-bottom:1.5rem">
+        <div class="card">
+          <div class="card-header"><h2>Generate Compliance Report</h2></div>
+          <div class="form-group">
+            <label>Supplier</label>
+            <select id="report-supplier" class="form-select">
+              <option>Sunrise Dyeworks Ltd. (Tier 3)</option>
+              <option>Kaveri Spinning Mills (Tier 1)</option>
+              <option>Om Weaving Corporation (Tier 2)</option>
+              <option>Tirumala Thread Works (Tier 3)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Framework</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="framework" value="BRSR_CORE" checked /> BRSR Core (SEBI)</label>
+              <label class="radio-item"><input type="radio" name="framework" value="CSRD_ESRS" /> EU CSRD/ESRS</label>
+              <label class="radio-item"><input type="radio" name="framework" value="GRI_2021" /> GRI 2021</label>
+              <label class="radio-item"><input type="radio" name="framework" value="SASB" /> SASB</label>
+            </div>
+          </div>
+          <button class="btn-primary" id="gen-report-btn" onclick="generateReport()">⚡ Generate Report</button>
+        </div>
+        <div class="card">
+          <div class="card-header"><h2>HITL State Machine</h2></div>
+          <div class="hitl-flow" id="hitl-flow">
+            <div class="hitl-state" id="hs-DRAFT">DRAFT</div>
+            <div class="hitl-arrow">→</div>
+            <div class="hitl-state" id="hs-PENDING_REVIEW">PENDING REVIEW</div>
+            <div class="hitl-arrow">→</div>
+            <div class="hitl-state" id="hs-APPROVED">APPROVED</div>
+            <div class="hitl-arrow">→</div>
+            <div class="hitl-state" id="hs-FILED">FILED ✅</div>
+          </div>
+          <div id="report-actions" style="margin-top:1rem;display:none">
+            <button class="btn-success" onclick="approveReport()">✅ Approve Report</button>
+            <button class="btn-danger" onclick="requestRevision()">↩ Request Revision</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="report-preview-card" style="display:none">
+        <div class="card-header">
+          <h2 id="report-title">BRSR Core Compliance Report</h2>
+          <div>
+            <span class="tag" id="report-state-badge">DRAFT</span>
+            <button class="btn-ghost" onclick="downloadReport()">⬇ Download JSON</button>
+          </div>
+        </div>
+        <div id="report-content"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h2>Report Registry</h2></div>
+        <table class="data-table">
+          <thead><tr><th>Report ID</th><th>Supplier</th><th>Framework</th><th>Model Used</th><th>State</th><th>Created</th><th>Actions</th></tr></thead>
+          <tbody id="report-registry"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CONVERSATIONAL ═══════════════════════ -->
+    <section class="tab-content" id="tab-conversational">
+      <div class="chat-container">
+        <div class="chat-suggestions" id="chat-suggestions">
+          <p class="sugg-label">Try asking:</p>
+          <div class="sugg-grid">
+            <button class="sugg-chip" onclick="sendSuggestion(this)">Show Tamil Nadu suppliers with water risk score &gt; 70</button>
+            <button class="sugg-chip" onclick="sendSuggestion(this)">Which Tier-3 suppliers have CPCB violations in the last 30 days?</button>
+            <button class="sugg-chip" onclick="sendSuggestion(this)">Generate a Scope 3 emissions summary for Kaveri Spinning Mills</button>
+            <button class="sugg-chip" onclick="sendSuggestion(this)">What are the top 5 suppliers by ESG risk score?</button>
+            <button class="sugg-chip" onclick="sendSuggestion(this)">List all suppliers missing ISO 14001 certification</button>
+            <button class="sugg-chip" onclick="sendSuggestion(this)">Show suppliers with water discharge violations near Tirupur</button>
+          </div>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" class="chat-input" placeholder="Ask anything about your supply chain..." onkeydown="if(event.key==='Enter') sendChat()" />
+          <button class="btn-primary chat-send" onclick="sendChat()">Send ↗</button>
+        </div>
+        <div class="chat-footnote">Powered by LangChain · Cypher query generation · Neo4j + Pinecone · IndicBERT multilingual</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ AUDIT LOG ═══════════════════════ -->
+    <section class="tab-content" id="tab-auditlog">
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="card-header">
+          <h2>Tamper-Evident Audit Trail <span class="tag">SHA-256 Hash Chain</span></h2>
+          <div class="topbar-right">
+            <span class="tag tag-live">PostgreSQL Append-Only</span>
+          </div>
+        </div>
+        <table class="data-table" id="audit-table">
+          <thead><tr><th>#</th><th>Timestamp</th><th>Agent</th><th>Event</th><th>Input Hash</th><th>Model</th><th>Confidence</th><th>Chain Hash</th></tr></thead>
+          <tbody id="audit-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
