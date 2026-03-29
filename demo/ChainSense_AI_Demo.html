@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChainSense AI â€” Scope 3 Supply Chain Intelligence</title>
+  <title>ChainSense AI — Scope 3 Supply Chain Intelligence</title>
   <meta name="description" content="ChainSense AI: Autonomous GenAI platform for Scope 3 supply chain ESG intelligence. Discover, monitor, and report on Tier 1-4 suppliers in real time." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-/* â”€â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Reset & Base ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -45,7 +45,7 @@ body {
   overflow-x: hidden;
 }
 
-/* â”€â”€â”€ Sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Sidebar ───────────────────────────────────────────────────────────────── */
 .sidebar {
   width: var(--sidebar-w);
   background: var(--surface);
@@ -96,7 +96,7 @@ body {
 .status-dot.green { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
 .status-dot.yellow { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
 
-/* â”€â”€â”€ Main â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Main ──────────────────────────────────────────────────────────────────── */
 .main {
   margin-left: var(--sidebar-w);
   flex: 1; display: flex; flex-direction: column;
@@ -134,11 +134,11 @@ body {
   padding: .3rem .8rem; border-radius: 20px; font-size: .8rem; font-weight: 600;
 }
 
-/* â”€â”€â”€ Tab Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Tab Content ───────────────────────────────────────────────────────────── */
 .tab-content { display: none; padding: 1.5rem 1.75rem; flex: 1; }
 .tab-content.active { display: block; }
 
-/* â”€â”€â”€ KPIs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── KPIs ──────────────────────────────────────────────────────────────────── */
 .kpi-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 1.25rem; }
 .kpi-card {
   background: var(--surface); border: 1px solid var(--border);
@@ -155,11 +155,11 @@ body {
 .kpi-delta.up { color: var(--accent); background: #22c55e18; }
 .kpi-delta.down { color: var(--red); background: #ef444418; }
 
-/* â”€â”€â”€ Grid Layouts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Grid Layouts ──────────────────────────────────────────────────────────── */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 1.25rem; }
 
-/* â”€â”€â”€ Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Cards ─────────────────────────────────────────────────────────────────── */
 .card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden;
@@ -171,7 +171,7 @@ body {
 }
 .card-header h2 { font-size: .95rem; font-weight: 700; display: flex; align-items: center; gap: .5rem; }
 
-/* â”€â”€â”€ Tags â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Tags ──────────────────────────────────────────────────────────────────── */
 .tag {
   font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 6px;
   background: var(--surface2); border: 1px solid var(--border2); color: var(--text2);
@@ -179,7 +179,7 @@ body {
 .tag-live { background: #22c55e18; border-color: #22c55e44; color: var(--accent); }
 .tag-crit { background: #ef444418; border-color: #ef444444; color: var(--red); }
 
-/* â”€â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Buttons ───────────────────────────────────────────────────────────────── */
 .btn-ghost {
   background: none; border: 1px solid var(--border2); color: var(--text2);
   padding: .35rem .8rem; border-radius: var(--radius-sm); cursor: pointer;
@@ -206,7 +206,7 @@ body {
 }
 .btn-danger:hover { opacity:.9; }
 
-/* â”€â”€â”€ Graph Canvas â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Graph Canvas ──────────────────────────────────────────────────────────── */
 canvas { display: block; width: 100%; }
 .graph-legend {
   display: flex; gap: 1rem; padding: .75rem 1.25rem;
@@ -215,7 +215,7 @@ canvas { display: block; width: 100%; }
 .leg { display:flex;align-items:center;gap:.35rem; font-size:.78rem; color:var(--text2); }
 .dot { width:10px;height:10px;border-radius:50%; }
 
-/* â”€â”€â”€ Alert Feed â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Alert Feed ────────────────────────────────────────────────────────────── */
 .alert-feed { padding: .75rem; display: flex; flex-direction: column; gap: .5rem; max-height: 340px; overflow-y: auto; }
 .alert-mini {
   background: var(--surface2); border: 1px solid var(--border);
@@ -239,7 +239,7 @@ canvas { display: block; width: 100%; }
 .alert-desc { font-size: .75rem; color: var(--text2); margin-top: .1rem; }
 .alert-time { font-size: .68rem; color: var(--text3); white-space:nowrap; }
 
-/* â”€â”€â”€ Agent Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Agent Cards ───────────────────────────────────────────────────────────── */
 .agent-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1rem;
@@ -251,7 +251,7 @@ canvas { display: block; width: 100%; }
 .progress-fill { height:100%; border-radius:20px; transition:width 1s ease; }
 .green { color: var(--accent); }
 
-/* â”€â”€â”€ Upload â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Upload ────────────────────────────────────────────────────────────────── */
 .upload-zone {
   border: 2px dashed var(--border2); border-radius: var(--radius);
   padding: 2.5rem 1.5rem; text-align: center; cursor: pointer;
@@ -269,7 +269,7 @@ canvas { display: block; width: 100%; }
 }
 .stage-icon { font-size: 1rem; }
 
-/* â”€â”€â”€ Tables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Tables ────────────────────────────────────────────────────────────────── */
 .data-table { width: 100%; border-collapse: collapse; }
 .data-table th {
   padding: .65rem 1rem; text-align: left; font-size: .72rem; font-weight: 600;
@@ -290,7 +290,7 @@ canvas { display: block; width: 100%; }
 .risk-high { background:#ef444418;color:var(--red); }
 #supplier-table-wrap { max-height: 260px; overflow-y: auto; }
 
-/* â”€â”€â”€ Filter toolbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Filter toolbar ────────────────────────────────────────────────────────── */
 .filter-toolbar {
   display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
   margin-bottom: 1.25rem; font-size: .8rem; color: var(--text2);
@@ -306,7 +306,7 @@ canvas { display: block; width: 100%; }
 .pill.crit.active { background:var(--red); border-color:var(--red); }
 .pill.high.active { background:var(--amber); border-color:var(--amber); }
 
-/* â”€â”€â”€ Alerts Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Alerts Grid ───────────────────────────────────────────────────────────── */
 .alerts-grid { display: flex; flex-direction: column; gap: .85rem; }
 .alert-card {
   background: var(--surface); border: 1px solid var(--border);
@@ -340,7 +340,7 @@ canvas { display: block; width: 100%; }
 .conf-fill { height:100%;border-radius:20px; background:linear-gradient(90deg,var(--accent),var(--blue)); }
 .conf-text { font-size:.7rem;color:var(--text3);white-space:nowrap; }
 
-/* â”€â”€â”€ Compliance â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Compliance ────────────────────────────────────────────────────────────── */
 .form-group { padding: 1rem 1.25rem; }
 .form-group label { display:block; font-size:.78rem; color:var(--text2); margin-bottom:.4rem; font-weight:600; }
 .form-select {
@@ -380,7 +380,7 @@ canvas { display: block; width: 100%; }
 .emit-big { font-size:2rem;font-weight:800;color:var(--accent);padding:1rem 1.25rem; }
 .emit-sub { font-size:.78rem;color:var(--text2); }
 
-/* â”€â”€â”€ Chat â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Chat ──────────────────────────────────────────────────────────────────── */
 .chat-container { max-width: 820px; margin: 0 auto; display:flex;flex-direction:column;height:calc(100vh - var(--topbar-h) - 3rem); }
 .chat-suggestions { margin-bottom: 1.5rem; }
 .sugg-label { font-size:.78rem;color:var(--text3);margin-bottom:.6rem; }
@@ -427,14 +427,14 @@ canvas { display: block; width: 100%; }
 .typing span:nth-child(3) { animation-delay:.4s; }
 @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
 
-/* â”€â”€â”€ Audit Log â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Audit Log ─────────────────────────────────────────────────────────────── */
 .mono { font-family:var(--mono); font-size:.72rem; color:var(--text3); }
 
-/* â”€â”€â”€ Misc â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Misc ──────────────────────────────────────────────────────────────────── */
 .empty-state { padding:2rem;text-align:center;color:var(--text3);font-size:.85rem; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:translateY(0)} }
 
-/* â”€â”€â”€ Scrollbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width:5px; height:5px; }
 ::-webkit-scrollbar-track { background:var(--bg); }
 ::-webkit-scrollbar-thumb { background:var(--border2); border-radius:20px; }
@@ -445,28 +445,28 @@ canvas { display: block; width: 100%; }
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
-      <span class="logo-icon">ðŸŒ¿</span>
+      <span class="logo-icon">🌿</span>
       <span class="logo-text">ChainSense<span class="logo-accent"> AI</span></span>
     </div>
     <nav class="sidebar-nav">
       <button class="nav-item active" data-tab="dashboard" id="nav-dashboard">
-        <span class="nav-icon">â¬¡</span> Dashboard
+        <span class="nav-icon">⬡</span> Dashboard
       </button>
       <button class="nav-item" data-tab="discovery" id="nav-discovery">
-        <span class="nav-icon">ðŸ”</span> Discovery Agent
+        <span class="nav-icon">🔍</span> Discovery Agent
       </button>
       <button class="nav-item" data-tab="monitoring" id="nav-monitoring">
-        <span class="nav-icon">ðŸ“¡</span> Monitoring Agent
+        <span class="nav-icon">📡</span> Monitoring Agent
         <span class="badge" id="alert-badge">3</span>
       </button>
       <button class="nav-item" data-tab="compliance" id="nav-compliance">
-        <span class="nav-icon">ðŸ“‹</span> Compliance Agent
+        <span class="nav-icon">📋</span> Compliance Agent
       </button>
       <button class="nav-item" data-tab="conversational" id="nav-conversational">
-        <span class="nav-icon">ðŸ’¬</span> Chat Agent
+        <span class="nav-icon">💬</span> Chat Agent
       </button>
       <button class="nav-item" data-tab="auditlog" id="nav-auditlog">
-        <span class="nav-icon">ðŸ”</span> Audit Log
+        <span class="nav-icon">🔐</span> Audit Log
       </button>
     </nav>
     <div class="sidebar-status">
@@ -483,7 +483,7 @@ canvas { display: block; width: 100%; }
     <header class="topbar">
       <div class="topbar-left">
         <span class="topbar-title" id="page-title">Dashboard</span>
-        <span class="topbar-sub" id="page-sub">ET Gen AI Hackathon 2026 Â· PS #5</span>
+        <span class="topbar-sub" id="page-sub">ET Gen AI Hackathon 2026 · PS #5</span>
       </div>
       <div class="topbar-right">
         <div class="livepill"><span class="pulse"></span> LIVE</div>
@@ -491,28 +491,28 @@ canvas { display: block; width: 100%; }
       </div>
     </header>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• DASHBOARD â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ DASHBOARD ═══════════════════════ -->
     <section class="tab-content active" id="tab-dashboard">
       <div class="kpi-row">
         <div class="kpi-card">
-          <div class="kpi-icon" style="background:linear-gradient(135deg,#22c55e22,#16a34a22)">ðŸ­</div>
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#22c55e22,#16a34a22)">🏭</div>
           <div class="kpi-info"><div class="kpi-val" id="kpi-suppliers">247</div><div class="kpi-label">Suppliers Mapped</div></div>
           <div class="kpi-delta up">+12 this week</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon" style="background:linear-gradient(135deg,#ef444422,#dc262622)">âš ï¸</div>
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#ef444422,#dc262622)">⚠️</div>
           <div class="kpi-info"><div class="kpi-val" id="kpi-alerts">18</div><div class="kpi-label">ESG Alerts Active</div></div>
           <div class="kpi-delta down">3 CRITICAL</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon" style="background:linear-gradient(135deg,#3b82f622,#1d4ed822)">ðŸ“‹</div>
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#3b82f622,#1d4ed822)">📋</div>
           <div class="kpi-info"><div class="kpi-val" id="kpi-reports">6</div><div class="kpi-label">Reports Generated</div></div>
           <div class="kpi-delta up">2 PENDING</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon" style="background:linear-gradient(135deg,#a855f722,#7c3aed22)">ðŸŒ</div>
-          <div class="kpi-info"><div class="kpi-val" id="kpi-co2">12,480</div><div class="kpi-label">tCOâ‚‚e Scope 3</div></div>
-          <div class="kpi-delta up">Â±5% accuracy</div>
+          <div class="kpi-icon" style="background:linear-gradient(135deg,#a855f722,#7c3aed22)">🌍</div>
+          <div class="kpi-info"><div class="kpi-val" id="kpi-co2">12,480</div><div class="kpi-label">tCO₂e Scope 3</div></div>
+          <div class="kpi-delta up">±5% accuracy</div>
         </div>
       </div>
 
@@ -521,7 +521,7 @@ canvas { display: block; width: 100%; }
         <div class="card card-tall">
           <div class="card-header">
             <h2>Supply Graph <span class="tag tag-live">LIVE</span></h2>
-            <button class="btn-ghost" onclick="switchTab('discovery')">Explore â†’</button>
+            <button class="btn-ghost" onclick="switchTab('discovery')">Explore →</button>
           </div>
           <canvas id="graphCanvas" width="500" height="340"></canvas>
           <div class="graph-legend">
@@ -536,7 +536,7 @@ canvas { display: block; width: 100%; }
         <div class="card card-tall">
           <div class="card-header">
             <h2>Live Alerts <span class="tag tag-crit">3 CRITICAL</span></h2>
-            <button class="btn-ghost" onclick="switchTab('monitoring')">All Alerts â†’</button>
+            <button class="btn-ghost" onclick="switchTab('monitoring')">All Alerts →</button>
           </div>
           <div class="alert-feed" id="alert-feed-dash"></div>
         </div>
@@ -545,25 +545,25 @@ canvas { display: block; width: 100%; }
       <!-- Agent Status Row -->
       <div class="grid-4">
         <div class="agent-card">
-          <div class="agent-hdr"><span>ðŸ”</span><b>Discovery</b></div>
+          <div class="agent-hdr"><span>🔍</span><b>Discovery</b></div>
           <div class="agent-stat">F1 Score: <b class="green">0.87</b></div>
           <div class="agent-stat">Docs Processed: <b>1,243</b></div>
           <div class="progress-bar"><div class="progress-fill" style="width:87%;background:#22c55e"></div></div>
         </div>
         <div class="agent-card">
-          <div class="agent-hdr"><span>ðŸ“¡</span><b>Monitoring</b></div>
+          <div class="agent-hdr"><span>📡</span><b>Monitoring</b></div>
           <div class="agent-stat">F1 Score: <b class="green">0.83</b></div>
           <div class="agent-stat">Signals/day: <b>4,200</b></div>
           <div class="progress-bar"><div class="progress-fill" style="width:83%;background:#3b82f6"></div></div>
         </div>
         <div class="agent-card">
-          <div class="agent-hdr"><span>ðŸ“‹</span><b>Compliance</b></div>
+          <div class="agent-hdr"><span>📋</span><b>Compliance</b></div>
           <div class="agent-stat">Reports: <b>6 total</b></div>
           <div class="agent-stat">Avg Time: <b class="green">2 weeks</b></div>
           <div class="progress-bar"><div class="progress-fill" style="width:91%;background:#a855f7"></div></div>
         </div>
         <div class="agent-card">
-          <div class="agent-hdr"><span>ðŸ’¬</span><b>Conversational</b></div>
+          <div class="agent-hdr"><span>💬</span><b>Conversational</b></div>
           <div class="agent-stat">Queries Today: <b>38</b></div>
           <div class="agent-stat">Avg Latency: <b class="green">1.2s</b></div>
           <div class="progress-bar"><div class="progress-fill" style="width:78%;background:#f59e0b"></div></div>
@@ -571,15 +571,15 @@ canvas { display: block; width: 100%; }
       </div>
     </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• DISCOVERY â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ DISCOVERY ═══════════════════════ -->
     <section class="tab-content" id="tab-discovery">
       <div class="grid-2" style="margin-bottom:1.5rem;">
         <div class="card">
           <div class="card-header"><h2>Upload Invoice / PO</h2></div>
           <div class="upload-zone" id="upload-zone" onclick="simulateUpload()">
-            <div class="upload-icon">ðŸ“„</div>
+            <div class="upload-icon">📄</div>
             <p>Click to upload or drag PDF/image invoice</p>
-            <span class="upload-hint">Supported: PDF, PNG, JPG Â· Max 20MB Â· PII auto-anonymized</span>
+            <span class="upload-hint">Supported: PDF, PNG, JPG · Max 20MB · PII auto-anonymized</span>
           </div>
           <div id="ner-progress" style="display:none">
             <div class="stage-list" id="stage-list"></div>
@@ -594,7 +594,7 @@ canvas { display: block; width: 100%; }
       </div>
       <div class="card">
         <div class="card-header">
-          <h2>Supplier Graph <span class="tag tag-live">247 nodes Â· 389 edges</span></h2>
+          <h2>Supplier Graph <span class="tag tag-live">247 nodes · 389 edges</span></h2>
           <div class="filter-row">
             <button class="pill active" onclick="filterGraph('all',this)">All</button>
             <button class="pill" onclick="filterGraph('t1',this)">Tier 1</button>
@@ -612,7 +612,7 @@ canvas { display: block; width: 100%; }
       </div>
     </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• MONITORING â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ MONITORING ═══════════════════════ -->
     <section class="tab-content" id="tab-monitoring">
       <div class="filter-toolbar">
         <label>Severity:</label>
@@ -622,14 +622,14 @@ canvas { display: block; width: 100%; }
         <button class="pill med" onclick="filterAlerts('MEDIUM',this)">MEDIUM</button>
         <button class="pill low" onclick="filterAlerts('LOW',this)">LOW</button>
         &nbsp;&nbsp;<label>Label:</label>
-        <button class="pill" onclick="filterAlerts('E',this)">ðŸŒ¿ Environmental</button>
-        <button class="pill" onclick="filterAlerts('S',this)">ðŸ¤ Social</button>
-        <button class="pill" onclick="filterAlerts('G',this)">ðŸ›ï¸ Governance</button>
+        <button class="pill" onclick="filterAlerts('E',this)">🌿 Environmental</button>
+        <button class="pill" onclick="filterAlerts('S',this)">🤝 Social</button>
+        <button class="pill" onclick="filterAlerts('G',this)">🏛️ Governance</button>
       </div>
       <div id="alerts-grid" class="alerts-grid"></div>
     </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• COMPLIANCE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ COMPLIANCE ═══════════════════════ -->
     <section class="tab-content" id="tab-compliance">
       <div class="grid-2" style="margin-bottom:1.5rem">
         <div class="card">
@@ -652,22 +652,22 @@ canvas { display: block; width: 100%; }
               <label class="radio-item"><input type="radio" name="framework" value="SASB" /> SASB</label>
             </div>
           </div>
-          <button class="btn-primary" id="gen-report-btn" onclick="generateReport()">âš¡ Generate Report</button>
+          <button class="btn-primary" id="gen-report-btn" onclick="generateReport()">⚡ Generate Report</button>
         </div>
         <div class="card">
           <div class="card-header"><h2>HITL State Machine</h2></div>
           <div class="hitl-flow" id="hitl-flow">
             <div class="hitl-state" id="hs-DRAFT">DRAFT</div>
-            <div class="hitl-arrow">â†’</div>
+            <div class="hitl-arrow">→</div>
             <div class="hitl-state" id="hs-PENDING_REVIEW">PENDING REVIEW</div>
-            <div class="hitl-arrow">â†’</div>
+            <div class="hitl-arrow">→</div>
             <div class="hitl-state" id="hs-APPROVED">APPROVED</div>
-            <div class="hitl-arrow">â†’</div>
-            <div class="hitl-state" id="hs-FILED">FILED âœ…</div>
+            <div class="hitl-arrow">→</div>
+            <div class="hitl-state" id="hs-FILED">FILED ✅</div>
           </div>
           <div id="report-actions" style="margin-top:1rem;display:none">
-            <button class="btn-success" onclick="approveReport()">âœ… Approve Report</button>
-            <button class="btn-danger" onclick="requestRevision()">â†© Request Revision</button>
+            <button class="btn-success" onclick="approveReport()">✅ Approve Report</button>
+            <button class="btn-danger" onclick="requestRevision()">↩ Request Revision</button>
           </div>
         </div>
       </div>
@@ -676,7 +676,7 @@ canvas { display: block; width: 100%; }
           <h2 id="report-title">BRSR Core Compliance Report</h2>
           <div>
             <span class="tag" id="report-state-badge">DRAFT</span>
-            <button class="btn-ghost" onclick="downloadReport()">â¬‡ Download JSON</button>
+            <button class="btn-ghost" onclick="downloadReport()">⬇ Download JSON</button>
           </div>
         </div>
         <div id="report-content"></div>
@@ -690,7 +690,7 @@ canvas { display: block; width: 100%; }
       </div>
     </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CONVERSATIONAL â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ CONVERSATIONAL ═══════════════════════ -->
     <section class="tab-content" id="tab-conversational">
       <div class="chat-container">
         <div class="chat-suggestions" id="chat-suggestions">
@@ -707,13 +707,13 @@ canvas { display: block; width: 100%; }
         <div class="chat-messages" id="chat-messages"></div>
         <div class="chat-input-row">
           <input type="text" id="chat-input" class="chat-input" placeholder="Ask anything about your supply chain..." onkeydown="if(event.key==='Enter') sendChat()" />
-          <button class="btn-primary chat-send" onclick="sendChat()">Send â†—</button>
+          <button class="btn-primary chat-send" onclick="sendChat()">Send ↗</button>
         </div>
-        <div class="chat-footnote">Powered by LangChain Â· Cypher query generation Â· Neo4j + Pinecone Â· IndicBERT multilingual</div>
+        <div class="chat-footnote">Powered by LangChain · Cypher query generation · Neo4j + Pinecone · IndicBERT multilingual</div>
       </div>
     </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• AUDIT LOG â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════════════════ AUDIT LOG ═══════════════════════ -->
     <section class="tab-content" id="tab-auditlog">
       <div class="card" style="margin-bottom:1.5rem">
         <div class="card-header">
@@ -731,7 +731,7 @@ canvas { display: block; width: 100%; }
   </main>
 
   <script>
-// â”€â”€â”€ Mock Data for ChainSense AI Demo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Mock Data for ChainSense AI Demo ─────────────────────────────────────────
 
 const SUPPLIERS = [
   { id:"SUP001", name:"Kaveri Spinning Mills", gst:"33AABCK1234M1Z5", tier:1, location:"Coimbatore, TN", material:"Cotton Yarn", risk:28, certs:["ISO 9001","GOTS"], status:"Active" },
@@ -755,7 +755,7 @@ const ESG_ALERTS = [
   {
     id:"ALT001", supplier_id:"SUP002", severity:"CRITICAL", labels:["E"],
     violation_type:"water_discharge_violation",
-    summary:"CPCB inspection on 2026-03-24 confirmed that Sunrise Dyeworks is discharging untreated effluent containing reactive azo dyes directly into the Noyyal River. COD levels at 4,200 mg/L (limit: 250 mg/L). Closure notice issued. Potential â‚¹2.4Cr penalty.",
+    summary:"CPCB inspection on 2026-03-24 confirmed that Sunrise Dyeworks is discharging untreated effluent containing reactive azo dyes directly into the Noyyal River. COD levels at 4,200 mg/L (limit: 250 mg/L). Closure notice issued. Potential ₹2.4Cr penalty.",
     sources:["CPCB Enforcement Report #26/TN/2026","Reuters India", "Tamil Nadu SPCB"],
     confidence:0.96, alert_tier:"< 6 hours", time:"2h ago",
     predicted_risk_days:0
@@ -779,7 +779,7 @@ const ESG_ALERTS = [
   {
     id:"ALT004", supplier_id:"SUP004", severity:"HIGH", labels:["S"],
     violation_type:"labor_rights_violation",
-    summary:"Labour Department inspection at Tirumala Thread Works found 38 migrant workers from Odisha employed without proper contracts. Minimum wage records show â‚¹180/day paid against â‚¹345/day mandate. Factory manager detained for questioning.",
+    summary:"Labour Department inspection at Tirumala Thread Works found 38 migrant workers from Odisha employed without proper contracts. Minimum wage records show ₹180/day paid against ₹345/day mandate. Factory manager detained for questioning.",
     sources:["ET Now","Labour Department Karnataka","LinkedIn reports"],
     confidence:0.82, alert_tier:"< 24 hours", time:"11h ago",
     predicted_risk_days:0
@@ -787,7 +787,7 @@ const ESG_ALERTS = [
   {
     id:"ALT005", supplier_id:"SUP009", severity:"HIGH", labels:["E"],
     violation_type:"air_emission_violation",
-    summary:"KM Printing Works screen printing plant exceeded PM2.5 emission threshold by 3.2Ã— during nighttime operations. SPCB stack monitor triggered 14 automated alerts over 48hr period. Warning notice issued; 15-day compliance deadline.",
+    summary:"KM Printing Works screen printing plant exceeded PM2.5 emission threshold by 3.2× during nighttime operations. SPCB stack monitor triggered 14 automated alerts over 48hr period. Warning notice issued; 15-day compliance deadline.",
     sources:["SPCB Real-Time Monitor","Pollution Control Board TN"],
     confidence:0.79, alert_tier:"< 24 hours", time:"18h ago",
     predicted_risk_days:0
@@ -803,7 +803,7 @@ const ESG_ALERTS = [
   {
     id:"ALT007", supplier_id:"SUP006", severity:"MEDIUM", labels:["G"],
     violation_type:"financial_stress_indicator",
-    summary:"Shiv Textiles Exports' Q3 FY26 balance sheet shows 4.2Ã— debt-to-equity ratio, up from 1.8Ã— in Q2. Three promoter shareholding pledges filed with SEBI in past 30 days. Credit rating downgraded from BBB+ to BB by CRISIL. Supply continuity risk flagged.",
+    summary:"Shiv Textiles Exports' Q3 FY26 balance sheet shows 4.2× debt-to-equity ratio, up from 1.8× in Q2. Three promoter shareholding pledges filed with SEBI in past 30 days. Credit rating downgraded from BBB+ to BB by CRISIL. Supply continuity risk flagged.",
     sources:["SEBI Filings","CRISIL Report","BSE Announcements"],
     confidence:0.74, alert_tier:"< 72 hours", time:"2d ago",
     predicted_risk_days:30
@@ -811,7 +811,7 @@ const ESG_ALERTS = [
   {
     id:"ALT008", supplier_id:"SUP001", severity:"LOW", labels:["E"],
     violation_type:"water_stress_sector_risk",
-    summary:"IMD seasonal forecast for Cauvery basin (Q1 2026-27): 19% deficit rainfall probability. Kaveri Spinning Mills draws 4,200 KL/day from Mettur reservoir allocation. Early-stage water stress indicator â€” no current violation.",
+    summary:"IMD seasonal forecast for Cauvery basin (Q1 2026-27): 19% deficit rainfall probability. Kaveri Spinning Mills draws 4,200 KL/day from Mettur reservoir allocation. Early-stage water stress indicator — no current violation.",
     sources:["IMD Seasonal Forecast","CWC Basin Report"],
     confidence:0.68, alert_tier:"Weekly digest", time:"3d ago",
     predicted_risk_days:60
@@ -833,11 +833,11 @@ const AUDIT_TRAIL = [
   { ts:"2026-03-29 20:18:15", agent:"MONITORING", event:"risk.alert.raised", input_hash:"c9a1f3d5", model:"llama-3.1-70b-versatile", confidence:0.96, chain:"5e1a8c3d" },
   { ts:"2026-03-29 20:19:03", agent:"COMPLIANCE", event:"rag.retrieved", input_hash:"d2b8c6e1", model:"text-embedding-3-small+cohere-rerank", confidence:0.91, chain:"7d4b2f9a" },
   { ts:"2026-03-29 20:19:41", agent:"COMPLIANCE", event:"report.generated", input_hash:"e5c3a9f8", model:"GPT-4o (primary)", confidence:0.94, chain:"1a7e5c3f" },
-  { ts:"2026-03-29 20:20:01", agent:"COMPLIANCE", event:"state_transition DRAFTâ†’PENDING_REVIEW", input_hash:"f1d6b4e2", model:"â€”", confidence:1.0, chain:"9b3d7e2c" },
+  { ts:"2026-03-29 20:20:01", agent:"COMPLIANCE", event:"state_transition DRAFT→PENDING_REVIEW", input_hash:"f1d6b4e2", model:"—", confidence:1.0, chain:"9b3d7e2c" },
   { ts:"2026-03-29 18:44:22", agent:"DISCOVERY", event:"ner.completed", input_hash:"a8e2f5b1", model:"llama-3.1-8b-instruct-q4_K_M", confidence:0.83, chain:"4c8a1f6e" },
   { ts:"2026-03-29 18:44:29", agent:"MONITORING", event:"signal.classified", input_hash:"b3c7d9a4", model:"llama-3.1-70b-versatile", confidence:0.93, chain:"6f2d8b5c" },
   { ts:"2026-03-29 16:30:11", agent:"CONVERSATIONAL", event:"nl.query.executed", input_hash:"c6f1a8d3", model:"gpt-4o + langchain", confidence:0.98, chain:"3a9c5e7b" },
-  { ts:"2026-03-29 14:11:58", agent:"COMPLIANCE", event:"audit_trail_sealed", input_hash:"d9b4e2f7", model:"â€”", confidence:1.0, chain:"8e1f4a2d" },
+  { ts:"2026-03-29 14:11:58", agent:"COMPLIANCE", event:"audit_trail_sealed", input_hash:"d9b4e2f7", model:"—", confidence:1.0, chain:"8e1f4a2d" },
 ];
 
 const CHAT_RESPONSES = {
@@ -849,7 +849,7 @@ WHERE s.state = "Tamil Nadu"
 RETURN s.name, s.tier, s.location,
        s.water_risk_score, s.risk_score
 ORDER BY s.water_risk_score DESC`,
-    answer: `Found **4 suppliers** in Tamil Nadu with water risk score > 70:\n\n| Supplier | Tier | Water Risk | ESG Risk |\n|---|---|---|---|\n| Sunrise Dyeworks Ltd. | 3 | ðŸ”´ 96 | 91 |\n| Maansi Water Treatment | 4 | ðŸ”´ 89 | 79 |\n| KM Printing Works | 3 | ðŸŸ¡ 74 | 62 |\n| Om Weaving Corporation | 2 | ðŸŸ¡ 71 | 55 |\n\nâš ï¸ **Sunrise Dyeworks** has an active CRITICAL CPCB violation. Recommend immediate supply chain risk review.`
+    answer: `Found **4 suppliers** in Tamil Nadu with water risk score > 70:\n\n| Supplier | Tier | Water Risk | ESG Risk |\n|---|---|---|---|\n| Sunrise Dyeworks Ltd. | 3 | 🔴 96 | 91 |\n| Maansi Water Treatment | 4 | 🔴 89 | 79 |\n| KM Printing Works | 3 | 🟡 74 | 62 |\n| Om Weaving Corporation | 2 | 🟡 71 | 55 |\n\n⚠️ **Sunrise Dyeworks** has an active CRITICAL CPCB violation. Recommend immediate supply chain risk review.`
   },
   cpcb: {
     query: "Which Tier-3 suppliers have CPCB violations in the last 30 days?",
@@ -860,7 +860,7 @@ WHERE s.tier = 3
 RETURN s.name, s.location, v.type,
        v.severity, v.date
 ORDER BY v.date DESC`,
-    answer: `Found **2 Tier-3 suppliers** with CPCB violations in the past 30 days:\n\n1. **Sunrise Dyeworks Ltd.** (Tirupur, TN)\n   - Untreated effluent discharge to Noyyal River\n   - COD: 4,200 mg/L (limit 250 mg/L) Â· Closure notice issued\n   - Date: 2026-03-24 Â· Severity: ðŸ”´ CRITICAL\n\n2. **KM Printing Works** (Karur, TN)\n   - PM2.5 exceedance (3.2Ã— threshold)\n   - 15-day compliance deadline\n   - Date: 2026-03-27 Â· Severity: ðŸŸ¡ HIGH`
+    answer: `Found **2 Tier-3 suppliers** with CPCB violations in the past 30 days:\n\n1. **Sunrise Dyeworks Ltd.** (Tirupur, TN)\n   - Untreated effluent discharge to Noyyal River\n   - COD: 4,200 mg/L (limit 250 mg/L) · Closure notice issued\n   - Date: 2026-03-24 · Severity: 🔴 CRITICAL\n\n2. **KM Printing Works** (Karur, TN)\n   - PM2.5 exceedance (3.2× threshold)\n   - 15-day compliance deadline\n   - Date: 2026-03-27 · Severity: 🟡 HIGH`
   },
   scope3: {
     query: "Generate a Scope 3 emissions summary for Kaveri Spinning Mills",
@@ -870,7 +870,7 @@ OPTIONAL MATCH (s)-[:HAS_EMISSION_DATA]->(em:EmissionData)
 RETURN s.name, s.location, s.material_type,
        sum(em.scope3_tco2e) as total_scope3,
        collect(em.category) as categories`,
-    answer: `**Scope 3 Emissions Summary â€” Kaveri Spinning Mills (FY2025-26)**\n\nðŸ“Š Total Scope 3: **1,240 tCOâ‚‚e/year** *(Â±8% confidence)*\n\n| Category | Source | tCOâ‚‚e |\n|---|---|---|\n| Cat 1 â€“ Purchased Goods | Cotton lint processing | 680 |\n| Cat 4 â€“ Upstream Transport | Road freight | 180 |\n| Cat 11 â€“ Processing of sold products | Downstream weaving | 280 |\n| Cat 12 â€“ End-of-life | Textile waste | 100 |\n\nðŸ“Ž Emission factors: IPCC AR6 Table 11.2 (textiles) + India BEE 2023\nWater intensity: 4,200 KL/day Â· Energy: 2.8 MW grid\n\nâœ… Meets BRSR Core GHG boundary requirements (GHG Protocol Scope 3 Standard)`
+    answer: `**Scope 3 Emissions Summary — Kaveri Spinning Mills (FY2025-26)**\n\n📊 Total Scope 3: **1,240 tCO₂e/year** *(±8% confidence)*\n\n| Category | Source | tCO₂e |\n|---|---|---|\n| Cat 1 – Purchased Goods | Cotton lint processing | 680 |\n| Cat 4 – Upstream Transport | Road freight | 180 |\n| Cat 11 – Processing of sold products | Downstream weaving | 280 |\n| Cat 12 – End-of-life | Textile waste | 100 |\n\n📎 Emission factors: IPCC AR6 Table 11.2 (textiles) + India BEE 2023\nWater intensity: 4,200 KL/day · Energy: 2.8 MW grid\n\n✅ Meets BRSR Core GHG boundary requirements (GHG Protocol Scope 3 Standard)`
   },
   top5: {
     query: "What are the top 5 suppliers by ESG risk score?",
@@ -879,7 +879,7 @@ RETURN s.name, s.tier, s.location,
        s.risk_score, s.risk_factors
 ORDER BY s.risk_score DESC
 LIMIT 5`,
-    answer: `**Top 5 Suppliers by ESG Risk Score:**\n\n| Rank | Supplier | Tier | Location | Risk Score | Top Risk |\n|---|---|---|---|---|---|\n| 1 | Sunrise Dyeworks | 3 | Tirupur, TN | ðŸ”´ **91** | CPCB violation |\n| 2 | Rajan Chemicals | 4 | Chennai, TN | ðŸ”´ **88** | Hazardous waste |\n| 3 | Maansi Water Trtmt | 4 | Tirupur, TN | ðŸ”´ **79** | Groundwater |\n| 4 | Tirumala Thread Works | 3 | Mysore, KA | ðŸŸ¡ **73** | Labor rights |\n| 5 | KM Printing Works | 3 | Karur, TN | ðŸŸ¡ **62** | Air emissions |\n\nðŸ’¡ 4 of top 5 are Tier 3-4 suppliers â€” invisible to traditional Tier-1 audits.`
+    answer: `**Top 5 Suppliers by ESG Risk Score:**\n\n| Rank | Supplier | Tier | Location | Risk Score | Top Risk |\n|---|---|---|---|---|---|\n| 1 | Sunrise Dyeworks | 3 | Tirupur, TN | 🔴 **91** | CPCB violation |\n| 2 | Rajan Chemicals | 4 | Chennai, TN | 🔴 **88** | Hazardous waste |\n| 3 | Maansi Water Trtmt | 4 | Tirupur, TN | 🔴 **79** | Groundwater |\n| 4 | Tirumala Thread Works | 3 | Mysore, KA | 🟡 **73** | Labor rights |\n| 5 | KM Printing Works | 3 | Karur, TN | 🟡 **62** | Air emissions |\n\n💡 4 of top 5 are Tier 3-4 suppliers — invisible to traditional Tier-1 audits.`
   },
   iso: {
     query: "List all suppliers missing ISO 14001 certification",
@@ -888,7 +888,7 @@ WHERE NOT (s)-[:HAS_CERTIFICATION]->(:Certification {name: "ISO 14001"})
 RETURN s.name, s.tier, s.location,
        s.risk_score, s.certifications
 ORDER BY s.tier, s.risk_score DESC`,
-    answer: `Found **9 suppliers** without ISO 14001 Environmental Management certification:\n\n| Supplier | Tier | Location | Risk Score |\n|---|---|---|---|\n| Sunrise Dyeworks Ltd. | 3 | Tirupur, TN | ðŸ”´ 91 |\n| Rajan Chemicals Pvt. | 4 | Chennai, TN | ðŸ”´ 88 |\n| Maansi Water Treatment | 4 | Tirupur, TN | ðŸ”´ 79 |\n| Tirumala Thread Works | 3 | Mysore, KA | ðŸŸ¡ 73 |\n| KM Printing Works | 3 | Karur, TN | ðŸŸ¡ 62 |\n| Chandra Button Works | 3 | Delhi, DL | ðŸŸ¢ 22 |\n...and 3 more\n\nðŸŽ¯ **Recommendation:** Prioritize ISO 14001 onboarding for Tier 3-4 high-risk suppliers. Estimated cost: â‚¹3-8L per supplier.`
+    answer: `Found **9 suppliers** without ISO 14001 Environmental Management certification:\n\n| Supplier | Tier | Location | Risk Score |\n|---|---|---|---|\n| Sunrise Dyeworks Ltd. | 3 | Tirupur, TN | 🔴 91 |\n| Rajan Chemicals Pvt. | 4 | Chennai, TN | 🔴 88 |\n| Maansi Water Treatment | 4 | Tirupur, TN | 🔴 79 |\n| Tirumala Thread Works | 3 | Mysore, KA | 🟡 73 |\n| KM Printing Works | 3 | Karur, TN | 🟡 62 |\n| Chandra Button Works | 3 | Delhi, DL | 🟢 22 |\n...and 3 more\n\n🎯 **Recommendation:** Prioritize ISO 14001 onboarding for Tier 3-4 high-risk suppliers. Estimated cost: ₹3-8L per supplier.`
   },
   water: {
     query: "Show suppliers with water discharge violations near Tirupur",
@@ -898,20 +898,27 @@ WHERE s.location CONTAINS "Tirupur"
 RETURN s.name, s.tier, v.type,
        v.severity, v.regulatory_body, v.date
 ORDER BY v.severity, v.date DESC`,
-    answer: `Found **2 suppliers** near Tirupur with water-related violations:\n\nðŸ”´ **Sunrise Dyeworks Ltd.** (Tier 3)\n- Untreated effluent to Noyyal River (COD: 4,200 mg/L)\n- Regulatory body: CPCB + TNPCB\n- Status: Closure notice Â· Fine: â‚¹2.4Cr\n- Evidence: [CPCB Report #26/TN/2026]\n\nðŸ”´ **Maansi Water Treatment** (Tier 4)\n- Groundwater contamination via leachate plume\n- Regulatory body: TNPCB (notified)\n- Status: Investigation ongoing Â· Satellite confirmed\n\nðŸ’¡ Both suppliers share a watershed zone. Combined risk may trigger district-level regulatory scrutiny.`
+    answer: `Found **2 suppliers** near Tirupur with water-related violations:\n\n🔴 **Sunrise Dyeworks Ltd.** (Tier 3)\n- Untreated effluent to Noyyal River (COD: 4,200 mg/L)\n- Regulatory body: CPCB + TNPCB\n- Status: Closure notice · Fine: ₹2.4Cr\n- Evidence: [CPCB Report #26/TN/2026]\n\n🔴 **Maansi Water Treatment** (Tier 4)\n- Groundwater contamination via leachate plume\n- Regulatory body: TNPCB (notified)\n- Status: Investigation ongoing · Satellite confirmed\n\n💡 Both suppliers share a watershed zone. Combined risk may trigger district-level regulatory scrutiny.`
   }
 };
 
 </script>
   <script>
-// â”€â”€â”€ ChainSense AI â€” Main Application Logic â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── ChainSense AI — Main Application Logic ────────────────────────────────────
 
 let currentReport = null;
 let reportState = null;
 let alertFilter = 'all';
+
+// Sync badge with actual CRITICAL alert count from data
+function syncAlertBadge() {
+  const critCount = ESG_ALERTS.filter(a => a.severity === 'CRITICAL').length;
+  const badge = document.getElementById('alert-badge');
+  if (badge) badge.textContent = critCount;
+}
 let graphFilter = 'all';
 
-// â”€â”€â”€ Tab Navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Tab Navigation ────────────────────────────────────────────────────────────
 
 function switchTab(tab) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
@@ -924,12 +931,12 @@ function switchTab(tab) {
     conversational: 'Chat Agent', auditlog: 'Audit Log'
   };
   const subs = {
-    dashboard: 'ET Gen AI Hackathon 2026 Â· PS #5',
+    dashboard: 'ET Gen AI Hackathon 2026 · PS #5',
     discovery: 'LLaMA 3.1-8B NER + Neo4j Supplier Graph',
-    monitoring: 'LLaMA 3.1-70B ESG Signal Classifier Â· 15+ Sources',
-    compliance: 'GPT-4o + RAG Â· HITL State Machine',
-    conversational: 'LangChain Â· NL â†’ Cypher Â· Multilingual',
-    auditlog: 'PostgreSQL Â· Append-Only Â· SHA-256 Hash Chain'
+    monitoring: 'LLaMA 3.1-70B ESG Signal Classifier · 15+ Sources',
+    compliance: 'GPT-4o + RAG · HITL State Machine',
+    conversational: 'LangChain · NL → Cypher · Multilingual',
+    auditlog: 'PostgreSQL · Append-Only · SHA-256 Hash Chain'
   };
   document.getElementById('page-title').textContent = titles[tab] || tab;
   document.getElementById('page-sub').textContent = subs[tab] || '';
@@ -939,7 +946,7 @@ document.querySelectorAll('.nav-item').forEach(btn => {
   btn.addEventListener('click', () => switchTab(btn.dataset.tab));
 });
 
-// â”€â”€â”€ Dashboard Graph Canvas â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Dashboard Graph Canvas ────────────────────────────────────────────────────
 
 function drawGraph(canvasId, suppliers, filterTier) {
   const canvas = document.getElementById(canvasId);
@@ -1033,7 +1040,7 @@ function drawGraph(canvasId, suppliers, filterTier) {
   }
 }
 
-// â”€â”€â”€ Alert Feed (Dashboard) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Alert Feed (Dashboard) ────────────────────────────────────────────────────
 
 function renderDashAlerts() {
   const container = document.getElementById('alert-feed-dash');
@@ -1043,7 +1050,7 @@ function renderDashAlerts() {
       <span class="alert-sev sev-${a.severity}">${a.severity}</span>
       <div class="alert-info">
         <div class="alert-supplier">${supplierName(a.supplier_id)}</div>
-        <div class="alert-desc">${a.violation_type.replace(/_/g,' ')} Â· ${a.alert_tier}</div>
+        <div class="alert-desc">${a.violation_type.replace(/_/g,' ')} · ${a.alert_tier}</div>
       </div>
       <span class="alert-time">${a.time}</span>
     </div>
@@ -1054,7 +1061,7 @@ function supplierName(id) {
   return SUPPLIERS.find(s => s.id === id)?.name || id;
 }
 
-// â”€â”€â”€ Supplier Table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Supplier Table ────────────────────────────────────────────────────────────
 
 function renderSupplierTable(filter) {
   const tbody = document.getElementById('supplier-tbody');
@@ -1069,13 +1076,13 @@ function renderSupplierTable(filter) {
       <td>${s.location}</td>
       <td>${s.material}</td>
       <td><span class="risk-badge ${riskClass(s.risk)}">${riskBar(s.risk)} ${s.risk}</span></td>
-      <td>${s.certs.length ? s.certs.map(c=>`<span class="tag">${c}</span>`).join(' ') : '<span style="color:#475569">â€”</span>'}</td>
+      <td>${s.certs.length ? s.certs.map(c=>`<span class="tag">${c}</span>`).join(' ') : '<span style="color:#475569">—</span>'}</td>
     </tr>
   `).join('');
 }
 
 function riskClass(r) { return r > 70 ? 'risk-high' : r > 45 ? 'risk-med' : 'risk-low'; }
-function riskBar(r) { return r > 70 ? 'ðŸ”´' : r > 45 ? 'ðŸŸ¡' : 'ðŸŸ¢'; }
+function riskBar(r) { return r > 70 ? '🔴' : r > 45 ? '🟡' : '🟢'; }
 function tierColor(t) { return ['','#22c55e','#3b82f6','#f59e0b','#ef4444'][t]; }
 function tierBg(t) { return ['','#22c55e18','#3b82f618','#f59e0b18','#ef444418'][t]; }
 
@@ -1087,7 +1094,7 @@ function filterGraph(f, btn) {
   renderSupplierTable(f);
 }
 
-// â”€â”€â”€ Upload / NER Simulation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Upload / NER Simulation ───────────────────────────────────────────────────
 
 async function simulateUpload() {
   const zone = document.getElementById('upload-zone');
@@ -1098,13 +1105,13 @@ async function simulateUpload() {
   results.innerHTML = '';
 
   const stages = [
-    { icon: 'ðŸ“„', text: 'PDF/image received â€” running OCR via Tesseract + LLMâ€¦', delay: 600 },
-    { icon: 'ðŸ”’', text: 'PII anonymization via Microsoft Presidioâ€¦', delay: 700 },
-    { icon: 'ðŸ§ ', text: 'LLaMA 3.1-8B NER inference (4-bit GGUF, 8192 ctx)â€¦', delay: 1200 },
-    { icon: 'ðŸ”', text: 'Regex augmentation (GST/CIN pattern matching)â€¦', delay: 500 },
-    { icon: 'ðŸ—„ï¸', text: 'Upserting supplier nodes to Neo4j graphâ€¦', delay: 600 },
-    { icon: 'ðŸ“¡', text: 'Publishing supplier.graph.updated to Redis Streamsâ€¦', delay: 400 },
-    { icon: 'âœ…', text: 'Done! 7 supplier entities extracted.', delay: 0 },
+    { icon: '📄', text: 'PDF/image received — running OCR via Tesseract + LLM…', delay: 600 },
+    { icon: '🔒', text: 'PII anonymization via Microsoft Presidio…', delay: 700 },
+    { icon: '🧠', text: 'LLaMA 3.1-8B NER inference (4-bit GGUF, 8192 ctx)…', delay: 1200 },
+    { icon: '🔍', text: 'Regex augmentation (GST/CIN pattern matching)…', delay: 500 },
+    { icon: '🗄️', text: 'Upserting supplier nodes to Neo4j graph…', delay: 600 },
+    { icon: '📡', text: 'Publishing supplier.graph.updated to Redis Streams…', delay: 400 },
+    { icon: '✅', text: 'Done! 7 supplier entities extracted.', delay: 0 },
   ];
 
   const stageList = document.getElementById('stage-list');
@@ -1124,13 +1131,13 @@ async function simulateUpload() {
   const mockExtracted = SUPPLIERS.slice(0, 7);
   results.innerHTML = `
     <div style="padding:.75rem 1.25rem">
-      <div style="margin-bottom:.75rem;font-size:.8rem;color:#94a3b8">Found <b style="color:#e2e8f0">${mockExtracted.length} supplier entities</b> Â· Doc hash: <span class="mono">a3f2c8e1â€¦</span></div>
+      <div style="margin-bottom:.75rem;font-size:.8rem;color:#94a3b8">Found <b style="color:#e2e8f0">${mockExtracted.length} supplier entities</b> · Doc hash: <span class="mono">a3f2c8e1…</span></div>
       ${mockExtracted.map((s, i) => `
         <div class="alert-mini" style="margin-bottom:.4rem">
           <span class="risk-badge" style="background:${tierBg(s.tier)};color:${tierColor(s.tier)};min-width:52px">T${s.tier}</span>
           <div class="alert-info">
             <div class="alert-supplier">${s.name}</div>
-            <div class="alert-desc">GST: ${s.gst} Â· ${s.location} Â· ${s.material}</div>
+            <div class="alert-desc">GST: ${s.gst} · ${s.location} · ${s.material}</div>
           </div>
           <span class="alert-time" style="color:#22c55e">conf ${(0.82 + i*0.02).toFixed(2)}</span>
         </div>
@@ -1138,13 +1145,13 @@ async function simulateUpload() {
     </div>`;
 
   zone.style.display = 'block';
-  zone.innerHTML = `<div class="upload-icon">âœ…</div><p>Invoice processed! Upload another?</p><span class="upload-hint">7 suppliers discovered Â· Graph updated</span>`;
+  zone.innerHTML = `<div class="upload-icon">✅</div><p>Invoice processed! Upload another?</p><span class="upload-hint">7 suppliers discovered · Graph updated</span>`;
   setTimeout(() => {
-    zone.innerHTML = `<div class="upload-icon">ðŸ“„</div><p>Click to upload or drag PDF/image invoice</p><span class="upload-hint">Supported: PDF, PNG, JPG Â· Max 20MB Â· PII auto-anonymized</span>`;
+    zone.innerHTML = `<div class="upload-icon">📄</div><p>Click to upload or drag PDF/image invoice</p><span class="upload-hint">Supported: PDF, PNG, JPG · Max 20MB · PII auto-anonymized</span>`;
   }, 5000);
 }
 
-// â”€â”€â”€ Monitoring Alerts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Monitoring Alerts ─────────────────────────────────────────────────────────
 
 function renderAlerts(filter) {
   const grid = document.getElementById('alerts-grid');
@@ -1176,7 +1183,7 @@ function renderAlerts(filter) {
             <span class="conf-text">${(a.confidence*100).toFixed(0)}%</span>
           </div>
           <div style="margin-top:.5rem;font-size:.72rem;color:#475569">
-            ðŸ“Ž ${a.sources.join(' Â· ')}
+            📎 ${a.sources.join(' · ')}
           </div>
         </div>
       </div>
@@ -1190,7 +1197,7 @@ function filterAlerts(f, btn) {
   renderAlerts(f);
 }
 
-// â”€â”€â”€ Compliance Report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Compliance Report ─────────────────────────────────────────────────────────
 
 function setHITLState(state) {
   const states = ['DRAFT', 'PENDING_REVIEW', 'APPROVED', 'FILED'];
@@ -1210,7 +1217,7 @@ function setHITLState(state) {
 async function generateReport() {
   const btn = document.getElementById('gen-report-btn');
   btn.disabled = true;
-  btn.textContent = 'â³ Generatingâ€¦';
+  btn.textContent = '⏳ Generating…';
 
   const framework = document.querySelector('input[name="framework"]:checked')?.value || 'BRSR_CORE';
   const supplier = document.getElementById('report-supplier').value;
@@ -1222,10 +1229,10 @@ async function generateReport() {
   // Simulate stages
   setHITLState('DRAFT');
   await delay(600);
-  content.innerHTML = '<div class="empty-state">ðŸ” Retrieving policy context via RAG (Pinecone + Cohere rerank)â€¦</div>';
+  content.innerHTML = '<div class="empty-state">🔍 Retrieving policy context via RAG (Pinecone + Cohere rerank)…</div>';
   card.style.display = 'block';
   await delay(900);
-  content.innerHTML = '<div class="empty-state">ðŸ§  Calling GPT-4o with framework promptâ€¦</div>';
+  content.innerHTML = '<div class="empty-state">🧠 Calling GPT-4o with framework prompt…</div>';
   setHITLState('PENDING_REVIEW');
   await delay(1200);
 
@@ -1233,7 +1240,7 @@ async function generateReport() {
   currentReport = reportData;
   reportState = 'PENDING_REVIEW';
 
-  document.getElementById('report-title').textContent = `${framework.replace('_',' ')} â€” ${supplier}`;
+  document.getElementById('report-title').textContent = `${framework.replace('_',' ')} — ${supplier}`;
   content.innerHTML = renderReportContent(reportData, framework);
 
   const actions = document.getElementById('report-actions');
@@ -1243,7 +1250,7 @@ async function generateReport() {
   addToRegistry(supplier, framework);
 
   btn.disabled = false;
-  btn.textContent = 'âš¡ Generate Report';
+  btn.textContent = '⚡ Generate Report';
 }
 
 function buildMockReport(supplier, framework) {
@@ -1252,18 +1259,18 @@ function buildMockReport(supplier, framework) {
     supplier, framework,
     scope3_emission_estimate_tonnes_co2e: Math.round(800 + Math.random()*2000),
     sections: {
-      "Section A: General Disclosures": { ctn: "Registered since 2015 Â· 1,200 employees Â· Revenue: â‚¹240Cr FY2025" },
+      "Section A: General Disclosures": { ctn: "Registered since 2015 · 1,200 employees · Revenue: ₹240Cr FY2025" },
       "Section B: Management & Process": { ctn: "EHS committee meets quarterly. ISO certification status: partial." },
       "Section C: Principle-wise Performance": { ctn: "P6 (Environment) score: 62/100. P8 (Inclusive Growth): 71/100." },
     },
     compliance_gaps: [
-      "Water discharge consent not renewed past April 2025 â€” non-compliant under EP Act 1986",
+      "Water discharge consent not renewed past April 2025 — non-compliant under EP Act 1986",
       "GHG inventory not independently verified (GHG Protocol requirement)",
       "ISO 14001 renewal pending (expires May 2026)",
       "Supply chain Scope 3 Category 1 data not collected from Tier 2+ suppliers"
     ],
     remediation_plan: [
-      "Immediately apply for renewal of CTO/CCA from TNPCB â€” estimated 3 weeks",
+      "Immediately apply for renewal of CTO/CCA from TNPCB — estimated 3 weeks",
       "Appoint KPMG / EY for GHG inventory verification (Q2 FY27 target)",
       "Schedule ISO 14001 audit with Bureau Veritas by April 30 2026",
       "Implement supplier data collection portal for Tier 2 Scope 3 data by Q3 FY27"
@@ -1278,23 +1285,23 @@ function buildMockReport(supplier, framework) {
 function renderReportContent(r, framework) {
   return `
     <div class="report-section">
-      <div class="report-section-title">ðŸŒ Scope 3 Emission Estimate</div>
-      <div class="emit-big">${r.scope3_emission_estimate_tonnes_co2e.toLocaleString()} tCOâ‚‚e/year
-        <span class="emit-sub"> Â· activity-based Â· IPCC AR6 + India BEE 2023</span>
+      <div class="report-section-title">🌍 Scope 3 Emission Estimate</div>
+      <div class="emit-big">${r.scope3_emission_estimate_tonnes_co2e.toLocaleString()} tCO₂e/year
+        <span class="emit-sub"> · activity-based · IPCC AR6 + India BEE 2023</span>
       </div>
     </div>
     <div class="report-section">
-      <div class="report-section-title">ðŸ“„ Framework Sections â€” ${framework.replace('_',' ')}</div>
+      <div class="report-section-title">📄 Framework Sections — ${framework.replace('_',' ')}</div>
       ${Object.entries(r.sections).map(([k,v]) => `
         <div class="report-field"><span class="report-field-key">${k}</span><span>${v.ctn}</span></div>
       `).join('')}
     </div>
     <div class="report-section">
-      <div class="report-section-title">âš ï¸ Compliance Gaps (${r.compliance_gaps.length})</div>
-      ${r.compliance_gaps.map(g => `<div class="report-gap">â—† ${g}</div>`).join('')}
+      <div class="report-section-title">⚠️ Compliance Gaps (${r.compliance_gaps.length})</div>
+      ${r.compliance_gaps.map(g => `<div class="report-gap">◆ ${g}</div>`).join('')}
     </div>
     <div class="report-section">
-      <div class="report-section-title">âœ… Remediation Plan</div>
+      <div class="report-section-title">✅ Remediation Plan</div>
       ${r.remediation_plan.map((g,i) => `<div class="report-remed">${i+1}. ${g}</div>`).join('')}
     </div>
     <div class="report-section" style="font-size:.78rem;color:#475569;display:flex;gap:2rem;flex-wrap:wrap">
@@ -1306,23 +1313,30 @@ function renderReportContent(r, framework) {
   `;
 }
 
+function fileReport() {
+  setHITLState('FILED');
+  reportState = 'FILED';
+  document.getElementById('report-actions').style.display = 'none';
+  AUDIT_TRAIL.unshift({
+    ts: new Date().toISOString().slice(0,19).replace('T',' '),
+    agent:'COMPLIANCE', event:'audit_trail_sealed',
+    input_hash: currentReport.report_id.toLowerCase(),
+    model: '—', confidence:1.0,
+    chain: Math.random().toString(16).slice(2,10)
+  });
+  renderAuditLog();
+}
+
 function approveReport() {
   if (!currentReport) return;
   reportState = 'APPROVED';
   setHITLState('APPROVED');
-  setTimeout(() => {
-    setHITLState('FILED');
-    reportState = 'FILED';
-    document.getElementById('report-actions').style.display = 'none';
-    AUDIT_TRAIL.unshift({
-      ts: new Date().toISOString().slice(0,19).replace('T',' '),
-      agent:'COMPLIANCE', event:'audit_trail_sealed',
-      input_hash: currentReport.report_id.toLowerCase(),
-      model:'â€”', confidence:1.0,
-      chain: Math.random().toString(16).slice(2,10)
-    });
-    renderAuditLog();
-  }, 1000);
+  // Show File button, hide Approve
+  const actions = document.getElementById('report-actions');
+  actions.innerHTML = `
+    <button class="btn-success" onclick="fileReport()">📁 File Report (Seal Audit Trail)</button>
+    <button class="btn-ghost" onclick="requestRevision()">↩ Request Revision</button>
+  `;
 }
 
 function requestRevision() {
@@ -1368,7 +1382,7 @@ function addToRegistry(supplier, framework) {
   renderReportRegistry();
 }
 
-// â”€â”€â”€ Chat Agent â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Chat Agent ────────────────────────────────────────────────────────────────
 
 const chatHistory = [];
 
@@ -1401,7 +1415,7 @@ function appendMsg(role, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${role}`;
   div.innerHTML = `
-    <div class="chat-avatar">${role === 'user' ? 'ðŸ‘¤' : 'ðŸŒ¿'}</div>
+    <div class="chat-avatar">${role === 'user' ? '👤' : '🌿'}</div>
     <div class="chat-bubble">${marked(text)}</div>
   `;
   messages.appendChild(div);
@@ -1413,7 +1427,7 @@ function appendTyping() {
   const messages = document.getElementById('chat-messages');
   const div = document.createElement('div');
   div.className = 'chat-msg ai';
-  div.innerHTML = `<div class="chat-avatar">ðŸŒ¿</div><div class="chat-bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  div.innerHTML = `<div class="chat-avatar">🌿</div><div class="chat-bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
   messages.appendChild(div);
   messages.scrollTop = messages.scrollHeight;
   return div;
@@ -1424,14 +1438,14 @@ function appendAIResponse(resp) {
   const div = document.createElement('div');
   div.className = 'chat-msg ai';
   div.innerHTML = `
-    <div class="chat-avatar">ðŸŒ¿</div>
+    <div class="chat-avatar">🌿</div>
     <div class="chat-bubble">
       <div style="margin-bottom:.6rem">${marked(resp.answer)}</div>
       <details style="border-top:1px solid #1e2538;padding-top:.5rem;margin-top:.5rem">
-        <summary style="cursor:pointer;font-size:.72rem;color:#475569">ðŸ” View generated Cypher query</summary>
+        <summary style="cursor:pointer;font-size:.72rem;color:#475569">🔍 View generated Cypher query</summary>
         <pre>${resp.cypher}</pre>
       </details>
-      <div style="margin-top:.5rem;font-size:.7rem;color:#475569">âš¡ LangChain Â· Neo4j Cypher Â· ${(Math.random()*0.8+0.6).toFixed(1)}s</div>
+      <div style="margin-top:.5rem;font-size:.7rem;color:#475569">⚡ LangChain · Neo4j Cypher · ${(Math.random()*0.8+0.6).toFixed(1)}s</div>
     </div>
   `;
   messages.appendChild(div);
@@ -1450,28 +1464,37 @@ function findChatResponse(q) {
   return {
     query: q,
     cypher: `MATCH (s:Supplier)\nWHERE toLower(s.name) CONTAINS toLower("${q.split(' ').slice(0,3).join(' ')}")\nRETURN s.name, s.tier, s.risk_score, s.location\nLIMIT 10`,
-    answer: `I searched the supply chain graph for: **"${q}"**\n\nFound **3 matching suppliers** with relevant data. Based on the Neo4j graph and Pinecone policy embeddings:\n\n- Kaveri Spinning Mills Â· Tier 1 Â· Risk: ðŸŸ¢ 28\n- Om Weaving Corporation Â· Tier 2 Â· Risk: ðŸŸ¡ 55\n- EcoThread Solutions Â· Tier 2 Â· Risk: ðŸŸ¢ 15\n\nðŸ’¡ For more specific insights, try asking about a specific supplier, location, or ESG dimension.`
+    answer: `I searched the supply chain graph for: **"${q}"**\n\nFound **3 matching suppliers** with relevant data. Based on the Neo4j graph and Pinecone policy embeddings:\n\n- Kaveri Spinning Mills · Tier 1 · Risk: 🟢 28\n- Om Weaving Corporation · Tier 2 · Risk: 🟡 55\n- EcoThread Solutions · Tier 2 · Risk: 🟢 15\n\n💡 For more specific insights, try asking about a specific supplier, location, or ESG dimension.`
   };
 }
 
-// Simple markdown parser (subset)
+// Markdown parser — supports bold, italic, code, paragraphs, and multi-row tables
 function marked(text) {
+  // Handle tables first (multi-line)
+  text = text.replace(/((?:\|.+\|\n?)+)/g, (block) => {
+    const rows = block.trim().split('\n').filter(r => r.trim());
+    let html = '<table class="data-table" style="margin:.5rem 0;font-size:.8rem">';
+    let isHeader = true;
+    rows.forEach(row => {
+      const cells = row.split('|').filter((_, i, a) => i > 0 && i < a.length - 1);
+      const isSep = cells.every(c => /^[-: ]+$/.test(c));
+      if (isSep) { isHeader = false; return; }
+      const tag = isHeader ? 'th' : 'td';
+      const style = isHeader ? 'font-weight:700;color:#94a3b8;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em' : 'padding:.35rem .7rem';
+      html += '<tr>' + cells.map(c => `<${tag} style="padding:.35rem .7rem;${style}">${c.trim()}</${tag}>`).join('') + '</tr>';
+      if (isHeader) isHeader = false;
+    });
+    return html + '</table>';
+  });
   return text
     .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
     .replace(/\*(.*?)\*/g, '<i>$1</i>')
-    .replace(/`(.*?)`/g, '<code>$1</code>')
-    .replace(/\n\n/g, '<br><br>')
-    .replace(/\n/g, '<br>')
-    .replace(/\|(.+)\|/g, (m) => {
-      const cells = m.split('|').filter(c => c.trim());
-      return '<table class="data-table" style="margin:.4rem 0"><tr>' + cells.map(c => {
-        if (/^[-:]+$/.test(c.trim())) return '';
-        return `<td style="padding:.3rem .6rem;font-size:.8rem">${c.trim()}</td>`;
-      }).join('') + '</tr></table>';
-    });
+    .replace(/`(.*?)`/g, '<code style="background:#1e2538;padding:.1rem .35rem;border-radius:4px;font-family:monospace;font-size:.82em">$1</code>')
+    .replace(/\n\n/g, '<br/><br/>')
+    .replace(/\n/g, '<br/>');
 }
 
-// â”€â”€â”€ Audit Log â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Audit Log ─────────────────────────────────────────────────────────────────
 
 function renderAuditLog() {
   const tbody = document.getElementById('audit-tbody');
@@ -1482,37 +1505,29 @@ function renderAuditLog() {
       <td class="mono" style="color:#94a3b8">${r.ts}</td>
       <td><span class="tag">${r.agent}</span></td>
       <td style="font-size:.8rem">${r.event}</td>
-      <td class="mono">${r.input_hash}â€¦</td>
+      <td class="mono">${r.input_hash}…</td>
       <td style="font-size:.78rem;color:#94a3b8">${r.model}</td>
       <td><div class="conf-bar" style="gap:.4rem"><div class="conf-track" style="width:60px"><div class="conf-fill" style="width:${r.confidence*100}%"></div></div><span class="conf-text">${(r.confidence*100).toFixed(0)}%</span></div></td>
-      <td class="mono">${r.chain}â€¦</td>
+      <td class="mono">${r.chain}…</td>
     </tr>
   `).join('');
 }
 
-// â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Utilities ─────────────────────────────────────────────────────────────────
 
 function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// â”€â”€â”€ Real-time Simulation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Real-time Simulation ─────────────────────────────────────────────────────
 
 function startLiveSimulation() {
   // Animate KPI counters
   animateCounter('kpi-suppliers', 0, 247, 1500);
-  animateCounter('kpi-alerts', 0, 18, 1200);
-  animateCounter('kpi-reports', 0, 6, 800);
+  animateCounter('kpi-alerts', 0, ESG_ALERTS.length, 1200);
+  animateCounter('kpi-reports', 0, REPORTS.length, 800);
   animateCounter('kpi-co2', 0, 12480, 2000);
 
-  // Periodically flash new alert
-  setInterval(() => {
-    const badge = document.getElementById('alert-badge');
-    if (badge) {
-      const n = parseInt(badge.textContent) + 1;
-      badge.textContent = n;
-      badge.style.transform = 'scale(1.4)';
-      setTimeout(() => badge.style.transform = 'scale(1)', 300);
-    }
-  }, 18000);
+  // Sync sidebar badge with actual CRITICAL alert count
+  syncAlertBadge();
 }
 
 function animateCounter(id, from, to, dur) {
@@ -1528,25 +1543,25 @@ function animateCounter(id, from, to, dur) {
   requestAnimationFrame(step);
 }
 
-// â”€â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Init ──────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   // Draw graphs
   drawGraph('graphCanvas', SUPPLIERS, 'all');
   drawGraph('graphCanvasBig', SUPPLIERS, 'all');
 
-  // Render data
+  // Render all data sections
   renderDashAlerts();
   renderSupplierTable('all');
   renderAlerts('all');
   renderReportRegistry();
   renderAuditLog();
+  syncAlertBadge();
 
-  // Animate
+  // Animate KPIs
   startLiveSimulation();
 });
 
 </script>
 </body>
 </html>
-

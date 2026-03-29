@@ -3,6 +3,13 @@
 let currentReport = null;
 let reportState = null;
 let alertFilter = 'all';
+
+// Sync badge with actual CRITICAL alert count from data
+function syncAlertBadge() {
+  const critCount = ESG_ALERTS.filter(a => a.severity === 'CRITICAL').length;
+  const badge = document.getElementById('alert-badge');
+  if (badge) badge.textContent = critCount;
+}
 let graphFilter = 'all';
 
 // ─── Tab Navigation ────────────────────────────────────────────────────────────
@@ -400,23 +407,30 @@ function renderReportContent(r, framework) {
   `;
 }
 
+function fileReport() {
+  setHITLState('FILED');
+  reportState = 'FILED';
+  document.getElementById('report-actions').style.display = 'none';
+  AUDIT_TRAIL.unshift({
+    ts: new Date().toISOString().slice(0,19).replace('T',' '),
+    agent:'COMPLIANCE', event:'audit_trail_sealed',
+    input_hash: currentReport.report_id.toLowerCase(),
+    model: '—', confidence:1.0,
+    chain: Math.random().toString(16).slice(2,10)
+  });
+  renderAuditLog();
+}
+
 function approveReport() {
   if (!currentReport) return;
   reportState = 'APPROVED';
   setHITLState('APPROVED');
-  setTimeout(() => {
-    setHITLState('FILED');
-    reportState = 'FILED';
-    document.getElementById('report-actions').style.display = 'none';
-    AUDIT_TRAIL.unshift({
-      ts: new Date().toISOString().slice(0,19).replace('T',' '),
-      agent:'COMPLIANCE', event:'audit_trail_sealed',
-      input_hash: currentReport.report_id.toLowerCase(),
-      model:'—', confidence:1.0,
-      chain: Math.random().toString(16).slice(2,10)
-    });
-    renderAuditLog();
-  }, 1000);
+  // Show File button, hide Approve
+  const actions = document.getElementById('report-actions');
+  actions.innerHTML = `
+    <button class="btn-success" onclick="fileReport()">📁 File Report (Seal Audit Trail)</button>
+    <button class="btn-ghost" onclick="requestRevision()">↩ Request Revision</button>
+  `;
 }
 
 function requestRevision() {
@@ -548,21 +562,30 @@ function findChatResponse(q) {
   };
 }
 
-// Simple markdown parser (subset)
+// Markdown parser — supports bold, italic, code, paragraphs, and multi-row tables
 function marked(text) {
+  // Handle tables first (multi-line)
+  text = text.replace(/((?:\|.+\|\n?)+)/g, (block) => {
+    const rows = block.trim().split('\n').filter(r => r.trim());
+    let html = '<table class="data-table" style="margin:.5rem 0;font-size:.8rem">';
+    let isHeader = true;
+    rows.forEach(row => {
+      const cells = row.split('|').filter((_, i, a) => i > 0 && i < a.length - 1);
+      const isSep = cells.every(c => /^[-: ]+$/.test(c));
+      if (isSep) { isHeader = false; return; }
+      const tag = isHeader ? 'th' : 'td';
+      const style = isHeader ? 'font-weight:700;color:#94a3b8;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em' : 'padding:.35rem .7rem';
+      html += '<tr>' + cells.map(c => `<${tag} style="padding:.35rem .7rem;${style}">${c.trim()}</${tag}>`).join('') + '</tr>';
+      if (isHeader) isHeader = false;
+    });
+    return html + '</table>';
+  });
   return text
     .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
     .replace(/\*(.*?)\*/g, '<i>$1</i>')
-    .replace(/`(.*?)`/g, '<code>$1</code>')
-    .replace(/\n\n/g, '<br><br>')
-    .replace(/\n/g, '<br>')
-    .replace(/\|(.+)\|/g, (m) => {
-      const cells = m.split('|').filter(c => c.trim());
-      return '<table class="data-table" style="margin:.4rem 0"><tr>' + cells.map(c => {
-        if (/^[-:]+$/.test(c.trim())) return '';
-        return `<td style="padding:.3rem .6rem;font-size:.8rem">${c.trim()}</td>`;
-      }).join('') + '</tr></table>';
-    });
+    .replace(/`(.*?)`/g, '<code style="background:#1e2538;padding:.1rem .35rem;border-radius:4px;font-family:monospace;font-size:.82em">$1</code>')
+    .replace(/\n\n/g, '<br/><br/>')
+    .replace(/\n/g, '<br/>');
 }
 
 // ─── Audit Log ─────────────────────────────────────────────────────────────────
@@ -593,20 +616,12 @@ function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 function startLiveSimulation() {
   // Animate KPI counters
   animateCounter('kpi-suppliers', 0, 247, 1500);
-  animateCounter('kpi-alerts', 0, 18, 1200);
-  animateCounter('kpi-reports', 0, 6, 800);
+  animateCounter('kpi-alerts', 0, ESG_ALERTS.length, 1200);
+  animateCounter('kpi-reports', 0, REPORTS.length, 800);
   animateCounter('kpi-co2', 0, 12480, 2000);
 
-  // Periodically flash new alert
-  setInterval(() => {
-    const badge = document.getElementById('alert-badge');
-    if (badge) {
-      const n = parseInt(badge.textContent) + 1;
-      badge.textContent = n;
-      badge.style.transform = 'scale(1.4)';
-      setTimeout(() => badge.style.transform = 'scale(1)', 300);
-    }
-  }, 18000);
+  // Sync sidebar badge with actual CRITICAL alert count
+  syncAlertBadge();
 }
 
 function animateCounter(id, from, to, dur) {
@@ -629,13 +644,14 @@ document.addEventListener('DOMContentLoaded', () => {
   drawGraph('graphCanvas', SUPPLIERS, 'all');
   drawGraph('graphCanvasBig', SUPPLIERS, 'all');
 
-  // Render data
+  // Render all data sections
   renderDashAlerts();
   renderSupplierTable('all');
   renderAlerts('all');
   renderReportRegistry();
   renderAuditLog();
+  syncAlertBadge();
 
-  // Animate
+  // Animate KPIs
   startLiveSimulation();
 });
